@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بيت النظافة - منظومة الحسابات</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">ب</div>
+        <div>
+          <h1>بيت النظافة</h1>
+          <p>منظومة الحسابات</p>
+        </div>
+      </div>
+      <nav id="nav">
+        <button class="nav-btn active" data-view="dashboard">🏠 الرئيسية</button>
+        <button class="nav-btn" data-view="sales">💰 المبيعات اليومية</button>
+        <button class="nav-btn" data-view="purchases">🧾 فواتير الشراء</button>
+        <button class="nav-btn" data-view="suppliers">🚚 الموردون</button>
+        <button class="nav-btn" data-view="expenses">💸 المصاريف</button>
+        <button class="nav-btn" data-view="payroll">👥 الموظفون والمرتبات</button>
+        <button class="nav-btn" data-view="accounts">💵 الصندوق والمصارف</button>
+        <button class="nav-btn" data-view="transfers">🔄 التحويلات</button>
+        <button class="nav-btn" data-view="ledger">📋 سجل الحركات</button>
+        <button class="nav-btn" data-view="reports">📊 التقارير</button>
+        <button class="nav-btn" data-view="settings">⚙️ الإعدادات</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">الرئيسية</h2>
+          <p id="todayText"></p>
+        </div>
+        <button id="menuBtn" class="menu-btn">☰</button>
+      </header>
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <dialog id="modal">
+    <form method="dialog" id="modalForm" class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle"></h3>
+        <button class="icon-btn" value="cancel">✕</button>
+      </div>
+      <div id="modalBody"></div>
+      <div class="modal-actions">
+        <button class="btn secondary" value="cancel">إلغاء</button>
+        <button class="btn primary" id="modalSave" value="default">حفظ</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
